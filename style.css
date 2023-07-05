@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-cyan: hsl(158, 36%, 37%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+body {
+    font-family: "Fraunces";
+    font-size: 14px;
+    background-color: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.box{
+    border-radius: 10px;
+    display: flex;
+    max-width: 666px;
+    background-color: var(--white);
+    margin: 0 1rem;
+}
+.images img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.content{
+    width: 50%;
+    padding: 2rem;
+}
+.content .header{
+    color: var(--very-dark-blue);
+    padding-right: 2rem;
+    margin-bottom: 1.75rem;
+
+}
+.content .desc{
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+    margin-bottom: 1.75rem;
+
+}
+.head{
+    font-family: "Montserrat";
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: var(--very-dark-blue);
+    margin-bottom: 1.75rem;
+
+}
+.price{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.75rem;
+}
+.price .current{
+    color: var(--dark-cyan);
+}
+.price .old{
+    font-family: "Montserrat";
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+}
+.content .btn{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Montserrat";
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.content .btn:hover{
+    background-color: var(--very-dark-blue);
+}
+@media only screen and (max-width: 550px) {
+    .box{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .images{
+        width: 100%;
+        height: 40%;
+    }
+    .images img{
+        content: url(./images/image-product-mobile.jpg);
+    }
+    .box{
+        flex-direction: column;
+    }
+    .content{
+        width: 100%;
+    }
+    .content .header{
+        padding-right: 0;
+    }
+    .images img{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+}
